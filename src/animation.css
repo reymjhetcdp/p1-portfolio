@@ -1,0 +1,306 @@
+/* animations */
+
+.header-description span {
+  border-radius: 15% 5% / 12% 40%;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgba(151, 222, 206, 0.6) 50%
+  );
+  background-position: 0;
+  background-size: 200%;
+
+  animation: highlighter 0.5s cubic-bezier(0.6, 0.05, 0.35, 1) 0.5s forwards;
+}
+
+.mint-highlight {
+  border-radius: 15% 5% / 12% 40%;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgba(151, 222, 206, 0.6) 50%
+  );
+  background-position: 0;
+  background-size: 200%;
+
+  animation: highlighter 0.5s cubic-bezier(0.6, 0.05, 0.35, 1) 0.5s forwards;
+}
+
+.blue-highlight {
+  border-radius: 15% 5% / 12% 40%;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgba(201, 238, 255, 0.9) 50%
+  );
+  background-position: 0;
+  background-size: 200%;
+
+  animation: highlighter 0.5s cubic-bezier(0.6, 0.05, 0.35, 1) 0.5s forwards;
+}
+
+.pink-highlight {
+  border-radius: 15% 5% / 12% 40%;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgba(255, 212, 212, 0.9) 50%
+  );
+  background-position: 0;
+  background-size: 200%;
+
+  animation: highlighter 0.5s cubic-bezier(0.6, 0.05, 0.35, 1) 0.5s forwards;
+}
+
+@keyframes highlighter {
+  to {
+    background-position: -100%;
+  }
+}
+
+/* hover content animation on card image */
+
+.card-body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.card-sub-title {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card-info {
+  font-size: 16px;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+}
+
+.image-container:hover .card-body {
+  right: 0;
+}
+
+/* clouds bg */
+
+.cloud.one {
+  top: 10%;
+  width: 300px;
+  height: 100px;
+  background-color: rgb(255, 212, 212);
+  animation-duration: 11s;
+  z-index: -1;
+}
+
+.cloud.two {
+  top: 25%;
+  width: 60px;
+  height: 20px;
+  background-color: rgb(201, 238, 255);
+  animation-duration: 10s;
+  z-index: -1;
+}
+
+.cloud.three {
+  top: 35%;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(151, 222, 206);
+  animation-duration: 12s;
+  z-index: -1;
+}
+
+.cloud.four {
+  top: 47%;
+  width: 250px;
+  height: 100px;
+  background-color: rgb(201, 238, 255);
+  animation-duration: 17s;
+  z-index: -1;
+}
+
+.cloud.five {
+  top: 80%;
+  width: 220px;
+  height: 80px;
+  background-color: rgb(151, 222, 206);
+  animation-duration: 14s;
+  z-index: -1;
+}
+
+.cloud.six {
+  top: 62%;
+  width: 150px;
+  height: 45px;
+  background-color: rgb(255, 212, 212);
+  animation-duration: 15s;
+  z-index: -1;
+}
+
+.cloud {
+  position: absolute;
+  left: 0;
+  border-radius: 1000px;
+  animation: clouds 5s infinite linear;
+}
+
+.cloud.one::before {
+  content: '';
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  width: 50%;
+  height: 150%;
+  background-color: rgb(255, 212, 212);
+  border-radius: 50%;
+}
+
+.cloud.one::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: 20%;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(255, 212, 212);
+  border-radius: 50%;
+}
+
+.cloud.two::before {
+  content: '';
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  width: 50%;
+  height: 150%;
+  background-color: rgb(201, 238, 255);
+  border-radius: 50%;
+}
+
+.cloud.two::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: 20%;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(201, 238, 255);
+  border-radius: 50%;
+}
+
+.cloud.three::before {
+  content: '';
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  width: 50%;
+  height: 150%;
+  background-color: rgb(151, 222, 206);
+  border-radius: 50%;
+}
+
+.cloud.three::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: 20%;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(151, 222, 206);
+  border-radius: 50%;
+}
+
+.cloud.four::before {
+  content: '';
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  width: 50%;
+  height: 150%;
+  background-color: rgb(201, 238, 255);
+  border-radius: 50%;
+}
+
+.cloud.four::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: 20%;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(201, 238, 255);
+  border-radius: 50%;
+}
+
+.cloud.five::before {
+  content: '';
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  width: 50%;
+  height: 150%;
+  background-color: rgb(151, 222, 206);
+  border-radius: 50%;
+}
+
+.cloud.five::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: 20%;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(151, 222, 206);
+  border-radius: 50%;
+}
+
+.cloud.six::before {
+  content: '';
+  position: absolute;
+  top: -80%;
+  left: 10%;
+  width: 50%;
+  height: 150%;
+  background-color: rgb(255, 212, 212);
+  border-radius: 50%;
+}
+
+.cloud.six::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: 20%;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(255, 212, 212);
+  border-radius: 50%;
+}
+
+@keyframes clouds {
+  from {
+    left: 0;
+    transform: translateX(-500px);
+  }
+
+  to {
+    left: 100%;
+  }
+}
